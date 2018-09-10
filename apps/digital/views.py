@@ -3,4 +3,4 @@ from django.http import HttpResponseRedirect, HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Hola pagina inicio");
+    return render(request, 'contenido/home.html')
