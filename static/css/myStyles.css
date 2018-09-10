@@ -1,0 +1,14 @@
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.btn-rounded {
+	border-radius: 50px;
+	padding: 0 15px 0 15px;
+}
