@@ -15,17 +15,24 @@
       <div class=" container row">
             <div class="row">
                 {% for organo in organos %}
-                  <div class="col s4">
-                    <a href="">
+                  <div class="col s12 m5 l4">
+                    <a href="/organo/{{organo.id}}">
                         <div class="card hoverable">
                             <div class="card-image">
-                                <img class="responsive-img" src="{% static '' %}{{organo.imagen}}"> 
+                                <img class="responsive-img" src="{% static '' %}{{organo.imagen}}">
                             </div>
                             <div class="card-content">
                                 <span class="card-title center-align">{{ organo.nombre }}</span>
                             </div>
                         </div>
                     </a>
+                  </div>
+                  <div class="col s12 m7 l8">
+                        <div class="card hoverable">
+                            <div class="card-content">
+
+                            </div>
+                        </div>
                   </div>
                 {% endfor %}
             </div>

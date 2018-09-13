@@ -1,0 +1,32 @@
+{% extends 'principal/principal.html' %}
+{% load staticfiles %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+
+    {% block navbar %}
+		{% include 'principal/navbar.html' %}
+	{% endblock %}
+
+    <div class="section cyan darken-3">
+    	<div class="row">
+		    <div class="col s12 m6 l5">
+		      <div class="card grey lighten-3">
+		        <div class="card-content black-text">
+		          <span class="card-title">{{organo.nombre}}</span>
+                  <p align="JUSTIFY">{{organo.descripcion}}</p>
+
+		        </div>
+		      </div>
+		    </div>
+		    <div class="col s12 m6 l7">
+				<div id="canvas"></div>
+		    </div>
+	    </div>
+	</div>
+
+    <script type="text/javascript" src="{% static 'js/OBJLoader.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/orbit_controls' %}"></script>
+    <script type="text/javascript" src="{% static 'js/cerebro.js' %}"></script>
+
+{% endblock %}
