@@ -1,24 +1,19 @@
-(function(){
-	//definimos la escena
 	var scene = new THREE.Scene();
-	//definimos la camara
-	const aspectRatio = window.innerWidth / innerHeight;
-	var camera = new THREE.PerspectiveCamera(75,aspectRatio,0.1,100);
-	//definimos el render
-	// let renderer = new THREE.WebGLRenderer();
-	// renderer.setSize(window.innerWidth*0.8,window.innerHeight*0.8);
-	// document.body.appendChild(renderer.domElement);
 
-	var renderer = new THREE.WebGLRenderer();
 	var container = document.getElementById('canvas');
 	var w = container.offsetWidth;
 	var h = container.offsetHeight;
-	renderer.setSize(w, h);
-	container.appendChild(renderer.domElement);
+
+	const aspectRatio = w / h;
+	var camera = new THREE.PerspectiveCamera(75,aspectRatio,0.1,100);
 
 	camera.position.z = 6;
 	camera.position.x = 0;
 	camera.position.y = 0;
+
+	var renderer = new THREE.WebGLRenderer();
+	renderer.setSize(w, h);
+	container.appendChild(renderer.domElement);
 
   	function loadModel() {
 		object.traverse( function ( child ) {
@@ -41,6 +36,7 @@
 			console.log( 'model ' + Math.round( percentComplete, 2 ) + '% downloaded' );
 		}
 	}
+	
 	function onError( xhr ) {}
 	var loader = new THREE.OBJLoader( manager );
 	loader.load( urlobj, function ( obj ) {
@@ -62,5 +58,3 @@
 	}
 
 	loop();
-
-})();
