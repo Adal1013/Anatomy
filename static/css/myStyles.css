@@ -1,5 +1,12 @@
 {% load static %}
 
+#canvas
+{
+	 background-color: #FFF;
+	 width: auto;
+	 height:500px;
+}
+
 body {
 	display: flex;
 	min-height: 100vh;
@@ -15,14 +22,13 @@ main {
 	padding: 0 15px 0 15px;
 }
 
-nav{
+.barra{
   /* position: fixed; */
   background: rgba(0, 0, 0, 0.2);
   padding:0px 20px;
 }
 
 .se{
-  /* background-image: url("{% static 'images/anatomia-humana2.png' %}"); */
   background-image: url(../images/anatomia-humana2.png);
   background-size: cover;
   width: 100%;

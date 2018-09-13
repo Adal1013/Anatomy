@@ -24,9 +24,20 @@
 		    </div>
 	    </div>
 	</div>
-
+{% endblock %}
+{% block extrajs %}
+    <script type="text/javascript">
+        var urltex = "{% static 'models/cerebro/brain_tex.jpg' %}";
+        var urlobj = "{% static 'models/cerebro/prominente.obj' %}";
+    </script>
+    <script type="text/javascript">
+        $("nav.barra").removeClass("barra");
+        $("div.nav-wrapper").addClass("cyan darken-4");
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
     <script type="text/javascript" src="{% static 'js/OBJLoader.js' %}"></script>
-    <script type="text/javascript" src="{% static 'js/orbit_controls' %}"></script>
+    <script type="text/javascript" src="{% static 'js/orbit_controls.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/cerebro.js' %}"></script>
+
 
 {% endblock %}

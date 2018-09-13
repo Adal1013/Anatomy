@@ -34,7 +34,7 @@
 	};
 
 	var textureLoader = new THREE.TextureLoader( manager );
-	var texture = textureLoader.load( 'models/cerebro/brain_tex.jpg' );
+	var texture = textureLoader.load( urltex);
 	function onProgress( xhr ) {
 		if ( xhr.lengthComputable ) {
 			var percentComplete = xhr.loaded / xhr.total * 100;
@@ -43,7 +43,7 @@
 	}
 	function onError( xhr ) {}
 	var loader = new THREE.OBJLoader( manager );
-	loader.load( 'models/cerebro/prominente.obj', function ( obj ) {
+	loader.load( urlobj, function ( obj ) {
 		object = obj;
 	}, onProgress, onError );
 
